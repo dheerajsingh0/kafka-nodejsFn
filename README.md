@@ -16,7 +16,12 @@ These instructions will get you a copy of the project up and running on your loc
 ### Setting Up & Running the Project
 
 Follow these steps to get the project up and running:
+#### Edit Ip address of The Bash file --run and skip till step 3
+```bash
+chmod +x setup.sh
+./setup.sh
 
+```
 #### 1. Install Node.js dependencies:
 
 ```bash
