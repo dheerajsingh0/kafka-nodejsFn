@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Load the environment variables
+# Load the environment variables if needed
 source .env
 
 # Check if Docker is installed, if not, install it
@@ -22,8 +22,14 @@ fi
 # else
 #     echo "Docker Compose is already installed."
 # fi
-
-# Run the Docker commands using the IP from .env
+# Check if node_modules directory exists, if not, run npm install
+if [ ! -d "node_modules" ]; then
+    echo "node_modules directory not found. Running npm install..."
+    npm install
+else
+    echo "node_modules directory already exists."
+fi
+# Run the Docker commands & replace the <IpAddress> from from below
 docker run -p 2181:2181 zookeeper
 
 docker run -p 9092:9092 \
