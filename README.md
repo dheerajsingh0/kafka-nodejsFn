@@ -55,6 +55,6 @@ node producer.js
 #### 5. Start the Kafka Consumer:
 
 ```bash
-node consumer.js
+node consumer.js <groupId>
 ```
 
